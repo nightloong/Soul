@@ -1,0 +1,3 @@
+speaker,timestamp,text,conversation_id
+Alice,2026-03-01T08:00:00+08:00,早上好,chat-1
+Bob,2026-03-01T08:01:00+08:00,早上好,chat-1

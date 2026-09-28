@@ -1,0 +1,4 @@
+{"messages":[
+  {"speaker":"Alice","timestamp":"2026-03-04T10:00:00+08:00","text":"先确认样本数量。"},
+  {"speaker":"Bob","timestamp":"2026-03-04T10:02:00+08:00","text":"同意，先从五位用户开始。"}
+]}

@@ -1,0 +1,6 @@
+{"conversation_id":"planning-1","speaker":"Alice","timestamp":"2026-01-10T09:00:00+08:00","text":"先验证最小方案，再决定是否扩大范围。","channel":"group_chat"}
+{"conversation_id":"planning-1","speaker":"Bob","timestamp":"2026-01-10T09:02:00+08:00","text":"好的，我今天整理测试名单。","channel":"group_chat"}
+{"conversation_id":"planning-1","speaker":"Alice","timestamp":"2026-01-10T09:03:00+08:00","text":"谢谢！先找五位用户可以吗？","channel":"group_chat"}
+{"conversation_id":"planning-2","speaker":"Alice","timestamp":"2026-02-12T10:00:00+08:00","text":"上次的小范围验证很有帮助，这次也先做原型。","channel":"meeting"}
+{"conversation_id":"planning-2","speaker":"Bob","timestamp":"2026-02-12T10:01:00+08:00","text":"我担心时间不够，能否先明确截止日期？","channel":"meeting"}
+{"conversation_id":"planning-2","speaker":"Alice","timestamp":"2026-02-12T10:02:00+08:00","text":"可以，周五前给出初版。","channel":"meeting"}

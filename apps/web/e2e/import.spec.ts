@@ -1,0 +1,25 @@
+import { expect, test } from '@playwright/test'
+
+test('preview, map speakers, import, and view persona', async ({ page }) => {
+  const dataset = `Browser Demo ${Date.now()}`
+  await page.goto('/datasets')
+  await expect(page.getByText('API: Healthy')).toBeVisible()
+  await page.getByLabel('Dataset name').fill(dataset)
+  await page.getByRole('button', { name: 'Create' }).click()
+  await page.getByRole('link', { name: 'People' }).click()
+  await page.getByRole('combobox', { name: 'Dataset', exact: true }).selectOption({ label: dataset })
+  await page.getByLabel('Person name').fill('Alice')
+  await page.getByRole('button', { name: 'Add' }).click()
+  await expect(page.getByRole('article').filter({ hasText: dataset }).getByRole('heading', { name: 'Alice' })).toBeVisible()
+  await page.getByRole('link', { name: 'Datasets' }).click()
+  await page.getByRole('combobox', { name: 'Dataset', exact: true }).selectOption({ label: dataset })
+  await page.getByLabel('Transcript file').setInputFiles('examples/synthetic-chat/project.jsonl')
+  await page.getByRole('button', { name: 'Preview' }).click()
+  await expect(page.getByText('6 messages')).toBeVisible()
+  await page.getByRole('combobox', { name: 'Map Alice' }).selectOption({ label: 'Alice' })
+  await page.getByRole('button', { name: 'Apply import' }).click()
+  await expect(page.getByRole('status')).toContainText('6 imported')
+  await page.getByRole('link', { name: 'People' }).click()
+  await page.getByRole('article').filter({ hasText: dataset }).getByRole('link', { name: 'View persona' }).click()
+  await expect(page.getByText('4 messages')).toBeVisible()
+})
