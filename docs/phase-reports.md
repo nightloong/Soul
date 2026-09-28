@@ -52,7 +52,7 @@ Added security regression tests for upload path traversal, size limits, HTML as 
 
 ## Phase 12 — release preparation
 
-Prepared version 0.1.0, release documentation, synthetic examples, and CI gates for Python tests, Ruff, frontend lint/tests/build, migration, and secret scanning. The repository has no Git remote, so a GitHub Release and a real fresh-clone test require a destination repository. The release checklist is in `docs/release-checklist.md`.
+Prepared version 0.1.0, release documentation, synthetic examples, and CI gates for Python tests, Ruff, frontend lint/tests/build, migration, and secret scanning. A local clean clone passed installation and checks. Vitest was updated to 4.1.11 after npm audit identified a moderate development-dependency advisory; npm audit then reported zero vulnerabilities. The repository has no Git remote, so remote CI and a GitHub Release require a destination repository. The release checklist is in `docs/release-checklist.md`.
 
 ## Verification record
 
