@@ -1,10 +1,12 @@
 # PersonaForge
 
-PersonaForge is a local-first, evidence-backed persona research application. It imports conversations, tracks the source of each inferred claim, supports corrections, retrieves relevant evidence, and runs clearly labelled persona simulations. The repository implements Phases 0–10 of the accompanying execution plan.
+[English](./README.md) | [简体中文](./README.zh-CN.md)
+
+PersonaForge is a local-first, evidence-backed persona research application. It imports conversations, tracks the source of each inferred claim, supports corrections, retrieves relevant evidence, and runs clearly labelled persona simulations. The repository implements Phases 0–12 of the accompanying execution plan.
 
 ## Run locally
 
-Requires Python 3.11+, Node.js 22+, and SQLite with FTS5. The examples below use the virtual environment's Python on Unix. On Windows replace `.venv/bin/python` with `.venv\Scripts\python.exe`; this workspace already has a virtual environment and npm dependencies installed.
+Requires Python 3.11+, Node.js 22+, and SQLite with FTS5. The examples below use the virtual environment's Python on Unix. On Windows replace `.venv/bin/python` with `.venv\Scripts\python.exe`.
 
 ```bash
 python -m venv .venv
@@ -35,7 +37,7 @@ The CLI is available through `.venv/bin/python -m personaforge.cli --help`. For 
 .venv/bin/python -m personaforge.cli import preview examples/synthetic-chat/project.jsonl
 ```
 
-Use the hash and raw speaker names returned by preview when applying the import. See `python -m personaforge.cli import apply --help` for the exact flags.
+Use the hash and raw speaker names returned by preview when applying the import. See `.venv/bin/python -m personaforge.cli import apply --help` for the exact flags.
 
 ## Model connection
 
